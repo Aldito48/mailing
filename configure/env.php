@@ -3,15 +3,15 @@
     $gateway = 'Wablas'; // Wablas || Fonnte
 
     if ($mode == 'dev') {
-        $db_host    = 'localhost';
-        $db_user    = 'root';
-        $db_pass    = '';
-        $db_name    = 'db_mailing';
+        $db_host = 'localhost';
+        $db_user = 'root';
+        $db_pass = '';
+        $db_name = 'db_mailing';
     } else if ($mode == 'prod') {
-        $db_host    = '';
-        $db_user    = '';
-        $db_pass    = '';
-        $db_name    = '';
+        $db_host = '';
+        $db_user = '';
+        $db_pass = '';
+        $db_name = '';
     } else {
         echo "Connection error!";
     }
