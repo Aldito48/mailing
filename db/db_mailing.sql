@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Des 2024 pada 06.10
+-- Waktu pembuatan: 05 Des 2024 pada 07.24
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -91,7 +91,9 @@ ALTER TABLE `tbl_menu`
 -- Indeks untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `code` (`code`),
+  ADD UNIQUE KEY `contact` (`contact`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
