@@ -35,7 +35,7 @@
                 alert('error', 'Login Failed', 'Invalid Password!', base_url().'auth.php');
             }
         } else {
-            alert('error', 'Login Failed', 'Invalid User Code!', base_url().'auth.php');
+            alert('error', 'Login Failed', 'Invalid User Code / NIK!', base_url().'auth.php');
         }
     } else if (isset($_POST['signup'])) {
         $code = trim(mysqli_real_escape_string($con, $_POST['code']));
