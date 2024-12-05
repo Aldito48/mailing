@@ -79,7 +79,7 @@
                             <input type="text" name="code" placeholder="User Code / NIK" class="input" required>
                         </div>
                         <div class="field input-field">
-                            <input type="text" name="contact" placeholder="No. WA" class="input" oninput="validateNumberInput(this)" required>
+                            <input type="text" name="contact" placeholder="No. WA (ex: 62xxxx)" class="input" oninput="validateNumberInput(this)" required>
                         </div>
                         <div class="field button-field">
                             <button type="submit" name="forgot">KIRIM OTP</button>
