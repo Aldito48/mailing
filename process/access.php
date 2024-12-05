@@ -90,7 +90,7 @@
                 </script>
             ";
         } else {
-            alert('error', 'Signup Failed', 'Invalid User Code / NIK and Contact!', base_url().'auth.php');
+            alert('error', 'Failed', 'Invalid User Code / NIK and Contact!', base_url().'auth.php');
         }
     } else if (isset($_POST['sendOTP'])) {
         $code = trim(mysqli_real_escape_string($con, $_POST['code']));
