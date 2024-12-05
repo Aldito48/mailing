@@ -16,7 +16,7 @@
                     $_SESSION['login_time'] = time();
                     alert('success', 'Login Success', 'Access Granted!', base_url().'dashboard.php');
                 } else {
-                    sendWA($wa_token, $wa_api_url, $contact, "*---- VERIFIKASI ----*\n\nUser Code / NIK : *{$row['code']}*\nOTP : *{$row['otp']}*");
+                    sendWA($gateway, $wa_token, $wa_api_url, $contact, "*---- VERIFIKASI ----*\n\nUser Code / NIK : *{$row['code']}*\nOTP : *{$row['otp']}*");
                     alert('info', 'Not Verified', 'Please Confirm The OTP!', null);
                     echo "
                         <form id='redirectLogin' action='".base_url()."otp' method='POST'>
@@ -49,7 +49,7 @@
             $qSignUp = mysqli_query($con, "INSERT INTO tbl_user (full_name, code, password, contact, otp)
             VALUES ('$full_name', '$code', '$hashedPassword', '$contact', '$otp')") or die(mysqli_error($con));
             if ($qSignUp) {
-                sendWA($wa_token, $wa_api_url, $contact, "*---- VERIFIKASI ----*\n\nUser Code / NIK : *$code*\nOTP : *$otp*");
+                sendWA($gateway, $wa_token, $wa_api_url, $contact, "*---- VERIFIKASI ----*\n\nUser Code / NIK : *$code*\nOTP : *$otp*");
                 alert('success', 'OTP Sended', 'Please Check Your WhatsApp!', null);
                 echo "
                     <form id='redirectSignUp' action='".base_url()."otp' method='POST'>
@@ -75,7 +75,7 @@
         $otp = mt_rand(1000, 9999);
         $qForgot = mysqli_query($con, "UPDATE tbl_user SET otp = '$otp' WHERE code = '$code' AND contact = '$contact'") or die (mysqli_error($con));
         if ($qForgot) {
-            sendWA($wa_token, $wa_api_url, $contact, "*---- VERIFIKASI ----*\n\nUser Code / NIK : *$code*\nOTP : *$otp*");
+            sendWA($gateway, $wa_token, $wa_api_url, $contact, "*---- VERIFIKASI ----*\n\nUser Code / NIK : *$code*\nOTP : *$otp*");
             alert('success', 'OTP Sended', 'Please Check Your WhatsApp!', null);
             echo "
                 <form id='redirectForgot' action='".base_url()."otp' method='POST'>
