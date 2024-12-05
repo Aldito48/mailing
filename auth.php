@@ -51,7 +51,7 @@
                             <input type="text" name="full_name" placeholder="Full Name" class="input" required>
                         </div>
                         <div class="field input-field">
-                            <input type="text" name="contact" placeholder="Nomor WA. ex: 62xxxx" class="input" oninput="validateNumberInput(this)" required>
+                            <input type="text" name="contact" placeholder="No. WA (ex: 62xxxx)" class="input" oninput="validateNumberInput(this)" required>
                         </div>
                         <div class="field input-field">
                             <input type="password" name="password" placeholder="Password" class="password" required>
