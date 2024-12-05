@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+* {
+    font-family: "Onest", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #262626;
+    column-gap: 30px;
+}
+
+.form {
+    position: absolute;
+    background: #fff;
+    border-radius: 6px;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+}
+
+header {
+    font-size: 28px;
+    font-weight: 600;
+    color: #171717;
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+}
+.form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.field input {
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid #d4d4d4;
+}
+.field input:read-only {
+    background-color: #d4d4d4;
+    cursor: not-allowed;
+}
+.field input:focus {
+    border-bottom-width: 2px;
+}
+.field button {
+    background: #262626;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.field button:hover {
+    background: #404040;
+    color: #fff;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #a3a3a3;
+    cursor: pointer;
+    padding: 5px;
+}
+.c-eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #a3a3a3;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+.form-link span,
+.form-link a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #262626;
+}
+
+.form a {
+    color: #2563eb;
+    text-decoration: none;
+}
+.form-content a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+    .form {
+        padding: 15px 10px;
+    }
+}
