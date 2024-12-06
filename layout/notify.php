@@ -40,16 +40,13 @@
                     icon: '$icon',
                     title: '$title',
                     text: '$text',
-                    showDenyButton: true,
-                    showCancelButton: false,
-                    confirmButtonText: 'Save',
-                    denyButtonText: `Don't save`
+                    showDenyButton: false,
+                    showCancelButton: true,
+                    confirmButtonText: 'Save'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire('Saved!', '', 'success');
                         window.location = '$redirect';
-                    } else if (result.isDenied) {
-                        Swal.fire('Changes are not saved', '', 'info');
                     }
                 });
             });
