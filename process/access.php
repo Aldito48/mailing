@@ -1,6 +1,6 @@
 <?php
     require "../configure/connect.php";
-    require "../layout/alert.php";
+    require "../layout/notify.php";
     require "request.php";
 
     if (isset($_POST['login'])) {
