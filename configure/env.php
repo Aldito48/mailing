@@ -1,6 +1,6 @@
 <?php
     $mode = 'dev'; // dev || prod
-    $gateway = 'Wablas'; // Wablas || Fonnte
+    $gateway = 'Fonnte'; // Wablas || Fonnte
 
     if ($mode == 'dev') {
         $db_host = 'localhost';
