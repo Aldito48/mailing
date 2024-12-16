@@ -74,6 +74,17 @@ form {
     background: #404040;
     color: #fff;
 }
+.resend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 10px;
+}
+#resendOTP {
+    cursor: pointer;
+}
 
 .eye-icon {
     position: absolute;

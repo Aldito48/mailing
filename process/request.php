@@ -19,7 +19,15 @@
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-            curl_exec($curl);
+            $response = curl_exec($curl);
+            echo "<script>console.log(Response: ".json_encode($response).");</script>";
+            if (curl_errno($curl)) {
+                $error_message = curl_error($curl);
+                echo "<script>console.log(Error: ".addslashes($error_message).");</script>";
+                return false;
+            } else {
+                return true;
+            }
             curl_close($curl);
         } else if ($gateway == 'Fonnte') {
             $curl = curl_init();
@@ -44,10 +52,18 @@
                     'Authorization: '.$token
                 ),
             ));
-            curl_exec($curl);
+            $response = curl_exec($curl);
+            echo "<script>console.log(Response: ".json_encode($response).");</script>";
+            if (curl_errno($curl)) {
+                $error_message = curl_error($curl);
+                echo "<script>console.log(Error: ".addslashes($error_message).");</script>";
+                return false;
+            } else {
+                return true;
+            }
             curl_close($curl);
         }
 
-        return;
+        return false;
     }
 ?>

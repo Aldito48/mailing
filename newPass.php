@@ -4,7 +4,7 @@
     if (isset($_SESSION['user'])) {
         echo "<script>window.location='".base_url()."dashboard.php';</script>";
     } else {
-        if (isset($_POST['code']) && isset($_POST['otp']) && $_POST['fpass'] == 'YES') {
+        if (isset($_POST['code']) && isset($_POST['otp']) && $_POST['fpass'] == 'true') {
 ?>
 <!DOCTYPE html>
 <html lang="id">

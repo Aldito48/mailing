@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Des 2024 pada 07.24
+-- Waktu pembuatan: 16 Des 2024 pada 12.19
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -66,6 +66,7 @@ CREATE TABLE `tbl_user` (
   `role` enum('owner','admin','warga') NOT NULL DEFAULT 'warga',
   `is_verified` enum('NO','YES') NOT NULL DEFAULT 'NO',
   `otp` varchar(4) DEFAULT NULL,
+  `otp_time` timestamp NULL DEFAULT NULL,
   `input_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `input_by` varchar(50) NOT NULL DEFAULT 'System'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -74,8 +75,8 @@ CREATE TABLE `tbl_user` (
 -- Dumping data untuk tabel `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `code`, `password`, `photo`, `full_name`, `contact`, `role`, `is_verified`, `otp`, `input_at`, `input_by`) VALUES
-(4, '123456789', '$2y$10$vY3qSfxUOQnwy5ayRmEZluAkN9n9JEPOqiuQGajf8QXamVId0bXTy', NULL, 'Aldito Fayyadh', '6287789393875', 'owner', 'YES', NULL, '2024-12-05 04:51:03', 'System');
+INSERT INTO `tbl_user` (`id`, `code`, `password`, `photo`, `full_name`, `contact`, `role`, `is_verified`, `otp`, `otp_time`, `input_at`, `input_by`) VALUES
+(2, '123456789', '$2y$10$0eNmAP8mKegyaB31gq.eoe8/AjGwMMiUEbOn9ZfAhJ75wFn7jaAn.', NULL, 'Aldito Fayyadh', '6287789393875', 'owner', 'YES', NULL, NULL, '2024-12-16 11:14:03', 'System');
 
 --
 -- Indexes for dumped tables
@@ -109,7 +110,7 @@ ALTER TABLE `tbl_menu`
 -- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
