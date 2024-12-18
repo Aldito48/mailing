@@ -20,10 +20,10 @@
             curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
             $response = curl_exec($curl);
-            echo "<script>console.log(Response: ".json_encode($response).");</script>";
+            echo "<script>console.log('Response: ".json_encode($response)."');</script>";
             if (curl_errno($curl)) {
                 $error_message = curl_error($curl);
-                echo "<script>console.log(Error: ".addslashes($error_message).");</script>";
+                echo "<script>console.log('Error: ".addslashes($error_message)."');</script>";
                 return false;
             } else {
                 return true;
@@ -53,10 +53,10 @@
                 ),
             ));
             $response = curl_exec($curl);
-            echo "<script>console.log(Response: ".json_encode($response).");</script>";
+            echo "<script>console.log('Response: ".json_encode($response)."');</script>";
             if (curl_errno($curl)) {
                 $error_message = curl_error($curl);
-                echo "<script>console.log(Error: ".addslashes($error_message).");</script>";
+                echo "<script>console.log('Error: ".addslashes($error_message)."');</script>";
                 return false;
             } else {
                 return true;
