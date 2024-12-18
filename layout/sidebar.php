@@ -32,10 +32,8 @@
             ?>
         </ul>
     </div>
-    <footer class="sidebar-footer">
-        <small>Powered by</small>
-        <br>
-        <span>- DITO -</span>
-    </footer>
+    <?php
+        eval(base64_decode('ZWNobyAnPGZvb3RlciBjbGFzcz0ic2lkZWJhci1mb290ZXIiPjxzbWFsbD5Qb3dlcmVkIGJ5PC9zbWFsbD48YnI+PHNwYW4+LSBESVRPIC0gPC9zcGFuPjwvZm9vdGVyPic7'));
+    ?>
 </div>
 <div class="sidebar-overlay" data-sidebar-dismiss=""></div>
