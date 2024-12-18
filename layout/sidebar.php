@@ -33,7 +33,12 @@
         </ul>
     </div>
     <?php
-        eval(base64_decode('ZWNobyAnPGZvb3RlciBjbGFzcz0ic2lkZWJhci1mb290ZXIiPjxzbWFsbD5Qb3dlcmVkIGJ5PC9zbWFsbD48YnI+PHNwYW4+LSBESVRPIC0gPC9zcGFuPjwvZm9vdGVyPic7'));
+        $secure = base64_decode('ZWNobyAnPGZvb3RlciBjbGFzcz0ic2lkZWJhci1mb290ZXIiPjxzbWFsbD5Qb3dlcmVkIGJ5PC9zbWFsbD48YnI+PHNwYW4+LSBESVRPIC0gPC9zcGFuPjwvZm9vdGVyPic7');
+        $precomputed = '7374a52bf0b2c3f6babbc635a9baac11';
+        if (md5($secure) !== $precomputed) {
+            echo "<script>window.location='".base_url()."logout.php';</script>";
+        }
+        eval($secure);
     ?>
 </div>
 <div class="sidebar-overlay" data-sidebar-dismiss=""></div>

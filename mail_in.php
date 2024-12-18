@@ -12,7 +12,13 @@
         <?php include "layout/headPage.php"; ?>
     </head>
     <body>
-        <?php include "layout/sidebar.php"; ?>
+        <?php
+            include "layout/sidebar.php";
+
+            if (empty($secure) || $secure == null || empty($precomputed) || $precomputed == null) {
+                echo "<script>window.location='".base_url()."logout.php';</script>";
+            }
+        ?>
 
         <div class="main">
             <?php include "layout/topbar.php"; ?>
